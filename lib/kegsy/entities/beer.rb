@@ -32,7 +32,7 @@ module Kegsy
       end
       
       # TODO pagination
-      def self.to_index_beers_json
+      def to_get_beer_json
         config = {
           :include => [
             :servings
