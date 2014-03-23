@@ -15,8 +15,8 @@ end
  
 task :environment, [:env] => 'bundler:setup' do |cmd, args|
   ENV["RACK_ENV"] = args[:env] || "development"
-  require "kegsy/infrastructure/database.rb"
-  DB = Kegsy::Infrastructure::DB
+  require "kegsy/adapters/sequel/sequel_adapter"
+  DB = Kegsy::Adapters::Sequel::SequelAdapter.start
 end
  
 namespace :db do

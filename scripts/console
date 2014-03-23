@@ -1,0 +1,7 @@
+#!/usr/bin/ruby
+
+require 'irb'
+require 'irb/completion'
+require File.expand_path('../../lib/kegsy', __FILE__)
+
+IRB.start

@@ -1,4 +1,4 @@
-require 'kegsy/infrastructure/database'
+require 'kegsy/infrastructure/app_config'
 
 module Kegsy
 

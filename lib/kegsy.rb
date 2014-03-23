@@ -6,6 +6,8 @@ require "ext/module"
 
 require 'kegsy/adapters'
 require 'kegsy/infrastructure'
+Kegsy::Adapters::Sequel::SequelAdapter.start
+
 require 'kegsy/entities'
 require 'kegsy/ports'
 require 'kegsy/events'
