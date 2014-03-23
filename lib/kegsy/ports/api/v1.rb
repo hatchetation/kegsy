@@ -1,5 +1,8 @@
 require 'sinatra'
 require 'kegsy/services/index_beer_service'
+require 'kegsy/services/get_beer_service'
+require 'kegsy/services/index_keg_service'
+require 'kegsy/services/index_servings_service'
 
 module Kegsy
   module Ports
@@ -8,15 +11,15 @@ module Kegsy
       class V1 < Sinatra::Base
 
         get "/beers" do
-          Kegsy::Services::IndexBeerService.handle(request)
+          Kegsy::Services::IndexBeerService.handle(request, params)
         end
 
         get "/beers/:id" do
-          # TODO Implement
+          Kegsy::Services::GetBeerService.handle(request, params)
         end
 
         get "/kegs" do
-          # TODO Implement
+          Kegsy::Services::IndexKegService.handle(request, params)
         end
 
         get "/kegs/:id" do
@@ -32,7 +35,7 @@ module Kegsy
         end
 
         get "/servings" do
-          # TODO Implement
+          Kegsy::Services::IndexServingsService.handle(request, params)
         end
         
         get "/servings/:id" do
