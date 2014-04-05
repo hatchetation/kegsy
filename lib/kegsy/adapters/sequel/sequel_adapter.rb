@@ -11,7 +11,7 @@ module Kegsy
         cattr_accessor :conn
 
         def self.start
-          openstr = Kegsy::Infrastructure::AppConfig.mysql_openstr
+          openstr = Kegsy::Infrastructure::AppConfig.sqlite_openstr
           self.conn = ::Sequel.connect(openstr)
         end
 

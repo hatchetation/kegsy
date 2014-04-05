@@ -5,3 +5,6 @@ mysql:
   password: kegsy
   database: kegsy
   driver: mysql2
+
+sqlite:
+  openstr: "sqlite:///srv/kegsy.db"
