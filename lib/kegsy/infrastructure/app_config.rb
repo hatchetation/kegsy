@@ -21,6 +21,11 @@ module Kegsy
         return "#{driver}://#{user}:#{password}@#{host}:#{port}/#{database}"
       end
 
+      def self.sqlite_openstr
+        self.ensure_config 
+        return @@config["sqlite"]["openstr"]
+      end
+
       def self.ensure_config
         if @@config.nil?
           @@config = self.from_file
