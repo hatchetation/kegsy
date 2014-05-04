@@ -1,2 +1,7 @@
 .bundle
 .vagrant
+
+# AVR build related
+.dep/
+.lib/
+firmware/build-*
